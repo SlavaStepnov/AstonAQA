@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class Lesson3_Arrays {
-
     //пункт 10
     public  static int[] createArray (int len, int initialValue) {
         int[] array = new int[len];
