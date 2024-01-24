@@ -1,29 +1,29 @@
 package lesson4;
 
 public class Employee {
-    String FULL_NAME;
-    String JOB_TITLE;
-    String EMAIL;
-    String PHONE_NUMBER;
-    int SALARY;
-    int AGE;
+    String fullName;
+    String jobTitle;
+    String email;
+    String phoneNumber;
+    int salary;
+    int age;
 
-    public Employee(String FULL_NAME, String JOB_TITLE, String EMAIL, String PHONE_NUMBER, int SALARY, int AGE) {
-        this.FULL_NAME = FULL_NAME;
-        this.JOB_TITLE = JOB_TITLE;
-        this.EMAIL = EMAIL;
-        this.PHONE_NUMBER = PHONE_NUMBER;
-        this.SALARY = SALARY;
-        this.AGE = AGE;
+    public Employee(String fullName, String jobTitle, String email, String phoneNumber, int salary, int age) {
+        this.fullName = fullName;
+        this.jobTitle = jobTitle;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.salary = salary;
+        this.age = age;
     }
 
     public void printEmployeeInfo () {
-        System.out.println("ФИО : " + FULL_NAME);
-        System.out.println("Должность : " + JOB_TITLE);
-        System.out.println("Email : " + EMAIL);
-        System.out.println("Номер телефона : " + PHONE_NUMBER);
-        System.out.println("Зарплата : " + SALARY);
-        System.out.println("Возраст : " + AGE);
+        System.out.println("ФИО : " + fullName);
+        System.out.println("Должность : " + jobTitle);
+        System.out.println("Email : " + email);
+        System.out.println("Номер телефона : " + phoneNumber);
+        System.out.println("Зарплата : " + salary);
+        System.out.println("Возраст : " + age);
         System.out.println();
     }
 
