@@ -44,7 +44,8 @@ public class AppData {
 
     //загрузка данных из csv файла
     public static AppData load(String fileName) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
             //читаем первую строку
             String[] header = reader.readLine().split(";");
 
@@ -69,6 +70,7 @@ public class AppData {
                 }
                 row++;
             }
+            newReader.close();
             return new AppData(header, data);
         } catch (IOException e) {
             e.printStackTrace();
