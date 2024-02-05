@@ -59,18 +59,18 @@ public class AppData {
 
             //читаем данные
             int[][] data = new int[numRows][numCols];
-            BufferedReader newReader = new BufferedReader(new FileReader(fileName)); //открываем файл снова, чтобы начать с самого начала
-            newReader.readLine(); //пропускаем строку заголовка
+            reader = new BufferedReader(new FileReader(fileName)); //открываем файл снова, чтобы начать с самого начала
+            reader.readLine(); //пропускаем строку заголовка
             String line;
             int row = 0;
-            while ((line = newReader.readLine()) != null) {
+            while ((line = reader.readLine()) != null) {
                 String[] values = line.split(";");
                 for (int i = 0; i < values.length; i++) {
                     data[row][i] = Integer.parseInt(values[i]);
                 }
                 row++;
             }
-            newReader.close();
+            reader.close();
             return new AppData(header, data);
         } catch (IOException e) {
             e.printStackTrace();
