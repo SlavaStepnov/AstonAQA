@@ -37,8 +37,10 @@ public class Box<T extends Fruit> {
     public void moveFruits(Box<T> boxToMoveTo) {
         if (this == boxToMoveTo)
             System.out.println("Нельзя переложить из коробки в неё же");
-        boxToMoveTo.fruits.addAll(this.fruits);
-        this.fruits.clear();
+        else {
+            boxToMoveTo.fruits.addAll(this.fruits);
+            this.fruits.clear();
+        }
     }
 
     //2 метода добавления для одного фрукта и для
