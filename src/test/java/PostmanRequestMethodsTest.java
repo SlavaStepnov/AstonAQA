@@ -19,7 +19,7 @@ public class PostmanRequestMethodsTest {
                 .body("headers.x-forwarded-proto", equalTo("https"))
                 .body("headers.x-forwarded-port", equalTo("443"))
                 .body("headers.host", equalTo("postman-echo.com"))
-                .body("headers.user-agent", equalTo("Apache-HttpClient/4.5.13 (Java/11.0.20)"));
+                .body("headers.user-agent", equalTo("Apache-HttpClient/4.5.13 (Java/17.0.11)"));
     }
 
     @Test
